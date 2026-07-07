@@ -14,16 +14,16 @@
                 extend: {
                     colors: {
                         wedding: {
-                            50: '#fffbf7', // Ivory/Cream background
-                            100: '#fdf2f0', // Softest blush
-                            200: '#fae3e1',
-                            300: '#f4c7c3', // Blush pink
-                            400: '#e8b4b8', // Rose Gold/Dusty Rose
-                            500: '#d4af37', // Champagne Gold primary
-                            600: '#c59b27', // Darker gold for hover
-                            700: '#8a7d6b', // Muted brownish-gold
-                            800: '#5c5246', 
-                            900: '#332d27', // Deep charcoal for text
+                            50: '#fffdfa',  // Very warm, clean ivory background
+                            100: '#fcf3ec', // Softest warm sand offset
+                            200: '#e8d6c8', // Warm borders
+                            300: '#d4baab', // Muted elements
+                            400: '#b58c7c', // Secondary icons/text
+                            500: '#8b2635', // Primary Trust Maroon (dignified, cultural, matches images)
+                            600: '#6e1b27', // Darker Maroon for hover states
+                            700: '#4a3b32', // Warm dark charcoal secondary text
+                            800: '#362a22', // Darker backgrounds
+                            900: '#241b15', // Deepest warm black for main headings
                         }
                     },
                     fontFamily: {
@@ -65,119 +65,115 @@
         </div>
     </header>
 
-    <!-- True Split Screen Hero Section -->
-    <section class="relative min-h-screen flex flex-col lg:flex-row pt-20 lg:pt-0 bg-wedding-50">
-        
-        <!-- Left: Text, Stats, and Image (50% Width) -->
-        <div class="w-full lg:w-1/2 flex flex-col px-6 lg:px-16 pt-10 lg:pt-24 pb-12 relative z-10 border-r border-wedding-500/20">
-            <div class="max-w-xl w-full mx-auto lg:mx-0 flex-1 flex flex-col justify-start">
+    <!-- Z-Pattern Hero Section -->
+    <section class="relative pt-28 lg:pt-36 pb-16 bg-wedding-50">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            
+            <!-- Top: Centered Text & Stats -->
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
                 <!-- Eyebrow -->
-                <div class="inline-block mb-4">
-                    <span class="font-display italic text-2xl text-wedding-600 tracking-wide">Auspicious Beginnings</span>
+                <div class="inline-block mb-3">
+                    <span class="uppercase tracking-widest text-xs font-bold text-wedding-500">Auspicious Beginnings</span>
                 </div>
                 
                 <!-- Main Headline -->
-                <h1 class="text-5xl lg:text-6xl font-display font-bold text-wedding-900 leading-[1.1] mb-6 tracking-tight">
-                    A dignified start for <span class="text-wedding-500 block mt-2">every couple.</span>
+                <h1 class="text-4xl lg:text-6xl font-display font-bold text-wedding-900 leading-[1.1] mb-5 tracking-tight">
+                    A dignified start for <span class="text-wedding-500 block mt-1">every couple.</span>
                 </h1>
                 
                 <!-- Subheadline -->
-                <p class="text-lg lg:text-xl text-wedding-700 leading-relaxed mb-10">
+                <p class="text-base lg:text-xl text-wedding-700 leading-relaxed mb-10 max-w-2xl mx-auto">
                     Project Shagun organizes beautiful mass weddings for underprivileged couples. Help them celebrate their union without the burden of financial debt or social pressure.
                 </p>
                 
-                <!-- Stats Grid -->
-                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 lg:gap-6 w-full mb-12">
+                <!-- Stats Grid (Horizontal) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl mx-auto">
                     <!-- Stat 1 -->
-                    <div class="bg-white/80 backdrop-blur border border-white/50 p-5 rounded-2xl shadow-sm text-center">
-                        <div class="w-10 h-10 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-500 mb-3">
-                            <i class="ph-bold ph-heart text-xl"></i>
+                    <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm text-center">
+                        <div class="w-8 h-8 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600 mb-2">
+                            <i class="ph-bold ph-heart text-lg"></i>
                         </div>
-                        <div class="text-2xl lg:text-3xl font-display font-bold text-wedding-900">400<span class="text-wedding-400 font-normal">+</span></div>
-                        <div class="text-xs font-bold tracking-widest text-wedding-800/60 uppercase mt-1">Couples</div>
+                        <div class="text-xl lg:text-2xl font-display font-bold text-wedding-900">400<span class="text-wedding-500 font-normal">+</span></div>
+                        <div class="text-[10px] lg:text-xs font-bold tracking-widest text-wedding-700 uppercase mt-1">Couples</div>
                     </div>
                     
                     <!-- Stat 2 -->
-                    <div class="bg-white/80 backdrop-blur border border-white/50 p-5 rounded-2xl shadow-sm text-center">
-                        <div class="w-10 h-10 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-500 mb-3">
-                            <i class="ph-bold ph-users text-xl"></i>
+                    <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm text-center">
+                        <div class="w-8 h-8 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600 mb-2">
+                            <i class="ph-bold ph-users text-lg"></i>
                         </div>
-                        <div class="text-2xl lg:text-3xl font-display font-bold text-wedding-900">1.5Lac<span class="text-wedding-400 font-normal">+</span></div>
-                        <div class="text-xs font-bold tracking-widest text-wedding-800/60 uppercase mt-1 leading-tight">Youth Interns<br>& Volunteers</div>
+                        <div class="text-xl lg:text-2xl font-display font-bold text-wedding-900">1.5Lac<span class="text-wedding-500 font-normal">+</span></div>
+                        <div class="text-[10px] lg:text-xs font-bold tracking-widest text-wedding-700 uppercase mt-1 leading-tight">Youth Interns<br>& Volunteers</div>
                     </div>
                     
                     <!-- Stat 3 -->
-                    <div class="bg-white/80 backdrop-blur border border-white/50 p-5 rounded-2xl shadow-sm text-center">
-                        <div class="w-10 h-10 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-500 mb-3">
-                            <i class="ph-bold ph-currency-inr text-xl"></i>
+                    <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm text-center">
+                        <div class="w-8 h-8 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600 mb-2">
+                            <i class="ph-bold ph-currency-inr text-lg"></i>
                         </div>
-                        <div class="text-2xl lg:text-3xl font-display font-bold text-wedding-900">15L<span class="text-wedding-400 font-normal">+</span></div>
-                        <div class="text-xs font-bold tracking-widest text-wedding-800/60 uppercase mt-1">Funds Raised</div>
+                        <div class="text-xl lg:text-2xl font-display font-bold text-wedding-900">15L<span class="text-wedding-500 font-normal">+</span></div>
+                        <div class="text-[10px] lg:text-xs font-bold tracking-widest text-wedding-700 uppercase mt-1">Funds Raised</div>
                     </div>
 
                     <!-- Stat 4 -->
-                    <div class="bg-white/80 backdrop-blur border border-white/50 p-5 rounded-2xl shadow-sm text-center">
-                        <div class="w-10 h-10 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-500 mb-3">
-                            <i class="ph-bold ph-calendar-blank text-xl"></i>
+                    <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm text-center">
+                        <div class="w-8 h-8 mx-auto bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600 mb-2">
+                            <i class="ph-bold ph-calendar-blank text-lg"></i>
                         </div>
-                        <div class="text-2xl lg:text-3xl font-display font-bold text-wedding-900">59</div>
-                        <div class="text-xs font-bold tracking-widest text-wedding-800/60 uppercase mt-1">Events</div>
+                        <div class="text-xl lg:text-2xl font-display font-bold text-wedding-900">59</div>
+                        <div class="text-[10px] lg:text-xs font-bold tracking-widest text-wedding-700 uppercase mt-1">Events</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Hero Image (Moved to bottom of left column) -->
-            <div class="w-full max-w-xl mx-auto lg:mx-0 mt-4 rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative h-[350px] lg:h-[450px]">
-                <img src="images/mass_hero.png" alt="Mass Wedding Ceremony by Ladli Foundation" class="absolute inset-0 w-full h-full object-cover" />
-            </div>
-        </div>
 
-        <!-- Right: Clean Form Area (50% Width) -->
-        <div class="w-full lg:w-1/2 min-h-screen relative flex items-center justify-center p-6 lg:p-12 bg-wedding-50">
-            
-            <!-- Donation Form Card (Solid White, highly trustworthy) -->
-            <div class="w-full max-w-lg bg-white rounded-3xl border border-wedding-200/60 p-8 lg:p-12 shadow-[0_20px_50px_rgba(212,175,55,0.06)] relative z-10">
-                
-                <div class="relative z-10 text-center mb-6 pt-4">
-                    <h2 class="text-2xl font-display font-bold text-wedding-900 mb-1">Make a Contribution</h2>
-                    <p class="text-wedding-900 text-xs font-bold uppercase tracking-widest mt-3 text-wedding-700">Sponsor a couple's new beginning</p>
+            <!-- Bottom: 50/50 Image & Form -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                <!-- Left: Massive Hero Image -->
+                <div class="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative aspect-[4/3] lg:aspect-auto lg:h-[600px] reveal-left">
+                    <img src="images/mass_hero.png" alt="Mass Wedding Ceremony by Ladli Foundation" class="absolute inset-0 w-full h-full object-cover hero-zoom" />
                 </div>
-                
-                <div class="absolute top-4 left-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
-                <div class="absolute top-4 right-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
-                <div class="absolute bottom-4 left-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
-                <div class="absolute bottom-4 right-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
-                
-                <form id="donation-form" class="space-y-7 relative z-10">
-                    <!-- Amount Selection -->
-                    <div>
-                        <div class="grid grid-cols-3 gap-3 mb-3">
-                            <button type="button" class="amount-btn active border-2 border-wedding-500 bg-wedding-50 text-wedding-600 font-bold rounded-xl py-2.5 transition-colors shadow-sm" data-amount="1000">₹1,000</button>
-                            <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-2.5 hover:border-wedding-400 transition-colors shadow-sm" data-amount="2500">₹2,500</button>
-                            <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-2.5 hover:border-wedding-400 transition-colors shadow-sm" data-amount="5000">₹5,000</button>
-                        </div>
-                        <div class="relative">
-                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-wedding-900 font-bold">₹</span>
-                            <input type="number" id="custom-amount" class="w-full bg-wedding-50 border-2 border-wedding-200 text-wedding-900 rounded-xl py-3 pl-10 pr-4 font-bold focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:border-transparent transition-all placeholder:text-wedding-700 shadow-inner" placeholder="Custom amount" value="1000">
-                        </div>
+
+                <!-- Right: Donation Form -->
+                <div class="w-full max-w-lg mx-auto bg-white rounded-3xl border border-wedding-200 p-8 lg:p-12 shadow-[0_20px_50px_rgba(139,38,53,0.08)] relative z-10 reveal-right">
+                    
+                    <div class="relative z-10 text-center mb-6 pt-2">
+                        <h2 class="text-3xl font-display font-bold text-wedding-900 mb-1">Make a Contribution</h2>
+                        <p class="text-wedding-900 text-xs font-bold uppercase tracking-widest mt-3 text-wedding-700">Sponsor a couple's new beginning</p>
                     </div>
                     
-                    <!-- User Details -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" class="w-full bg-wedding-50 border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-700 shadow-sm" placeholder="Full Name" required>
-                        <input type="email" class="w-full bg-wedding-50 border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-700 shadow-sm" placeholder="Email" required>
-                    </div>
-                    <input type="tel" class="w-full bg-wedding-50 border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-700 shadow-sm" placeholder="Mobile Number" required>
-                    
-                    <button type="submit" class="w-full bg-wedding-600 text-white font-bold text-lg rounded-xl py-4 shadow-lg shadow-wedding-600/30 hover:bg-wedding-700 hover:-translate-y-0.5 transition-all flex justify-center items-center gap-2 mt-4">
-                        Donate Securely <i class="ph-bold ph-heart"></i>
-                    </button>
-                    
-                    <p class="text-center text-xs text-wedding-900 mt-4 flex items-center justify-center gap-1 font-bold bg-white/40 py-1.5 rounded-full">
-                        <i class="ph-fill ph-check-circle text-wedding-600"></i> Encrypted & secure. 80G Tax Exemption.
-                    </p>
-                </form>
+                    <!-- Form -->
+                    <form id="donation-form" class="space-y-7 relative z-10">
+                        <!-- Amount Selection -->
+                        <div>
+                            <div class="grid grid-cols-3 gap-3 mb-3">
+                                <button type="button" class="amount-btn active border-2 border-wedding-500 bg-wedding-50 text-wedding-600 font-bold rounded-xl py-3 transition-colors shadow-sm" data-amount="1000">₹1,000</button>
+                                <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-3 hover:border-wedding-400 transition-colors shadow-sm" data-amount="2500">₹2,500</button>
+                                <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-3 hover:border-wedding-400 transition-colors shadow-sm" data-amount="5000">₹5,000</button>
+                            </div>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-wedding-900 font-bold">₹</span>
+                                <input type="number" id="custom-amount" class="w-full bg-wedding-50 border-2 border-wedding-200 text-wedding-900 rounded-xl py-3 pl-10 pr-4 font-bold focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:border-transparent transition-all placeholder:text-wedding-700 shadow-inner" placeholder="Custom amount" value="1000">
+                            </div>
+                        </div>
+                        
+                        <!-- User Details -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" class="w-full bg-wedding-50 border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-700 shadow-sm" placeholder="Full Name" required>
+                            <input type="email" class="w-full bg-wedding-50 border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-700 shadow-sm" placeholder="Email" required>
+                        </div>
+                        <input type="tel" class="w-full bg-wedding-50 border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-700 shadow-sm" placeholder="Mobile Number" required>
+                        
+                        <button type="submit" class="w-full bg-wedding-500 text-white font-bold text-lg rounded-xl py-4 shadow-lg shadow-wedding-500/30 hover:bg-wedding-600 hover:-translate-y-0.5 transition-all flex justify-center items-center gap-2 mt-4">
+                            Donate Securely <i class="ph-bold ph-heart"></i>
+                        </button>
+                        
+                        <p class="text-center text-xs text-wedding-900 mt-4 flex items-center justify-center gap-1 font-bold bg-white/40 py-1.5 rounded-full">
+                            <i class="ph-fill ph-check-circle text-wedding-600"></i> Encrypted & secure. 80G Tax Exemption.
+                        </p>
+                    </form>
+                </div>
             </div>
+            
         </div>
     </section>
 

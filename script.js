@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Donation Button Logic
     const amountBtns = document.querySelectorAll('.amount-btn');
     const customAmountInput = document.getElementById('custom-amount');
+    const customAmountWrapper = document.getElementById('custom-amount-wrapper');
 
     amountBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -31,8 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
             target.classList.remove('border-wedding-200', 'text-wedding-700', 'bg-white');
             target.classList.add('border-wedding-500', 'bg-wedding-50', 'text-wedding-600');
             
-            // Update input
-            customAmountInput.value = target.getAttribute('data-amount');
+            const amt = target.getAttribute('data-amount');
+            if (amt === 'other') {
+                customAmountWrapper.classList.remove('hidden');
+                customAmountInput.value = '';
+                customAmountInput.focus();
+            } else {
+                customAmountWrapper.classList.add('hidden');
+                customAmountInput.value = amt;
+            }
         });
     });
 

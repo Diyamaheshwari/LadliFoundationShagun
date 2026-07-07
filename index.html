@@ -113,45 +113,35 @@
                             Project Shagun organizes beautiful mass weddings for underprivileged couples. Help them celebrate their union without the burden of financial debt or social pressure.
                         </p>
                         
-                        <!-- Stats Grid (2x2) -->
-                        <div class="grid grid-cols-2 gap-4 w-full max-w-md mx-auto lg:mx-0 mb-10">
-                            <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm flex items-center gap-3 text-left">
+                        <!-- Stats Grid (3 columns) -->
+                        <div class="grid grid-cols-3 gap-4 w-full max-w-xl mx-auto lg:mx-0 mb-10">
+                            <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                                 <div class="w-10 h-10 shrink-0 bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600">
                                     <i class="ph-bold ph-heart text-lg"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xl font-display font-bold text-wedding-900 leading-none">400<span class="text-wedding-500 font-normal">+</span></div>
+                                    <div class="text-xl font-display font-bold text-wedding-900 leading-none mt-1 md:mt-0">400<span class="text-wedding-500 font-normal">+</span></div>
                                     <div class="text-[10px] font-bold tracking-widest text-wedding-700 uppercase mt-1">Couples</div>
                                 </div>
                             </div>
                             
-                            <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm flex items-center gap-3 text-left">
+                            <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                                 <div class="w-10 h-10 shrink-0 bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600">
                                     <i class="ph-bold ph-users text-lg"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xl font-display font-bold text-wedding-900 leading-none">1.5L<span class="text-wedding-500 font-normal">+</span></div>
+                                    <div class="text-xl font-display font-bold text-wedding-900 leading-none mt-1 md:mt-0">1.5L<span class="text-wedding-500 font-normal">+</span></div>
                                     <div class="text-[10px] font-bold tracking-widest text-wedding-700 uppercase mt-1 leading-tight">Volunteers</div>
                                 </div>
                             </div>
                             
-                            <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm flex items-center gap-3 text-left">
+                            <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                                 <div class="w-10 h-10 shrink-0 bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600">
                                     <i class="ph-bold ph-currency-inr text-lg"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xl font-display font-bold text-wedding-900 leading-none">15L<span class="text-wedding-500 font-normal">+</span></div>
+                                    <div class="text-xl font-display font-bold text-wedding-900 leading-none mt-1 md:mt-0">15L<span class="text-wedding-500 font-normal">+</span></div>
                                     <div class="text-[10px] font-bold tracking-widest text-wedding-700 uppercase mt-1">Funds</div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white border border-wedding-200 p-4 rounded-xl shadow-sm flex items-center gap-3 text-left">
-                                <div class="w-10 h-10 shrink-0 bg-wedding-50 rounded-full flex items-center justify-center text-wedding-600">
-                                    <i class="ph-bold ph-calendar-blank text-lg"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xl font-display font-bold text-wedding-900 leading-none">59</div>
-                                    <div class="text-[10px] font-bold tracking-widest text-wedding-700 uppercase mt-1">Events</div>
                                 </div>
                             </div>
                         </div>
@@ -176,14 +166,15 @@
                         <form id="donation-form" class="space-y-5 relative z-10">
                             <!-- Amount Selection -->
                             <div>
-                                <div class="grid grid-cols-3 gap-2 mb-3">
+                                <div class="grid grid-cols-2 gap-3 mb-4">
                                     <button type="button" class="amount-btn active border-2 border-wedding-500 bg-wedding-50 text-wedding-600 font-bold rounded-xl py-2.5 transition-colors shadow-sm text-sm" data-amount="1000">₹1,000</button>
                                     <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-2.5 hover:border-wedding-400 transition-colors shadow-sm text-sm" data-amount="2500">₹2,500</button>
                                     <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-2.5 hover:border-wedding-400 transition-colors shadow-sm text-sm" data-amount="5000">₹5,000</button>
+                                    <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-2.5 hover:border-wedding-400 transition-colors shadow-sm text-sm" data-amount="other">Other</button>
                                 </div>
-                                <div class="relative">
+                                <div class="relative hidden animate-fade-in" id="custom-amount-wrapper">
                                     <span class="absolute left-4 top-1/2 -translate-y-1/2 text-wedding-900 font-bold">₹</span>
-                                    <input type="number" id="custom-amount" class="w-full bg-wedding-50 border-2 border-wedding-200 text-wedding-900 rounded-xl py-2.5 pl-9 pr-4 font-bold focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:border-transparent transition-all placeholder:text-wedding-700 shadow-inner" placeholder="Custom amount" value="1000">
+                                    <input type="number" id="custom-amount" class="w-full bg-wedding-50 border-2 border-wedding-200 text-wedding-900 rounded-xl py-2.5 pl-9 pr-4 font-bold focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:border-transparent transition-all placeholder:text-wedding-700 shadow-inner" placeholder="Enter custom amount">
                                 </div>
                             </div>
                             
@@ -444,13 +435,13 @@
     <!-- Extended Donation Modal -->
     <div id="extended-donation-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
         <!-- Backdrop -->
-        <div class="absolute inset-0 bg-wedding-900/40 backdrop-blur-sm" id="modal-backdrop"></div>
+        <div class="absolute inset-0 bg-wedding-900/60 backdrop-blur-sm" id="modal-backdrop"></div>
         
         <!-- Modal Content -->
-        <div class="relative w-full max-w-md mx-4 bg-[#f8fafc] rounded-[2rem] shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="modal-content">
+        <div class="relative w-full max-w-md mx-4 bg-wedding-50 border border-wedding-200 rounded-[2rem] shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="modal-content">
             
             <!-- Close Button -->
-            <button type="button" id="close-modal-btn" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors shadow-sm z-10">
+            <button type="button" id="close-modal-btn" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white text-wedding-400 hover:text-wedding-900 hover:bg-wedding-100 transition-colors shadow-sm z-10 border border-wedding-200">
                 <i class="ph-bold ph-x text-sm"></i>
             </button>
 
@@ -458,16 +449,16 @@
                 
                 <!-- Date of Birth -->
                 <div>
-                    <label class="block text-sm font-semibold text-slate-700 mb-1.5">Date of Birth</label>
+                    <label class="block text-sm font-semibold text-wedding-900 mb-1.5">Date of Birth</label>
                     <div class="relative">
-                        <input type="date" required class="w-full bg-white border border-slate-200 text-slate-700 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all shadow-sm">
+                        <input type="date" required class="w-full bg-white border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:border-transparent transition-all shadow-sm">
                     </div>
                 </div>
 
                 <!-- Tax Exemption Card -->
-                <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex items-start gap-3">
-                    <input type="checkbox" id="tax-exemption-checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 shrink-0 cursor-pointer">
-                    <label for="tax-exemption-checkbox" class="text-sm text-slate-600 leading-relaxed cursor-pointer">
+                <div class="bg-white border border-wedding-200 rounded-2xl p-4 shadow-sm flex items-start gap-3">
+                    <input type="checkbox" id="tax-exemption-checkbox" class="mt-1 w-4 h-4 text-wedding-600 bg-white rounded border-wedding-300 focus:ring-wedding-500 shrink-0 cursor-pointer">
+                    <label for="tax-exemption-checkbox" class="text-sm text-wedding-700 leading-relaxed cursor-pointer">
                         Check this only if you want to claim tax exemption after your donation. Your address and PAN details will be needed for that.
                     </label>
                 </div>
@@ -477,42 +468,42 @@
                     
                     <!-- Address -->
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-1.5">Address</label>
-                        <input type="text" id="donor-address" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                        <label class="block text-sm font-semibold text-wedding-900 mb-1.5">Address</label>
+                        <input type="text" id="donor-address" class="w-full bg-white border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:bg-white transition-all">
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <!-- PIN Code -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">PIN Code</label>
-                            <input type="number" id="donor-pin" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                            <label class="block text-sm font-semibold text-wedding-900 mb-1.5">PIN Code</label>
+                            <input type="number" id="donor-pin" class="w-full bg-white border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:bg-white transition-all">
                         </div>
                         
                         <!-- PAN Number -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">PAN Number <span class="text-red-500">*</span></label>
-                            <input type="text" id="donor-pan" class="w-full bg-white border border-pink-500 text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all uppercase placeholder:normal-case placeholder:text-slate-400" placeholder="Enter PAN number">
-                            <p class="text-[10px] text-red-500 mt-1 font-medium" id="pan-error">PAN number is required</p>
+                            <label class="block text-sm font-semibold text-wedding-900 mb-1.5">PAN Number <span class="text-wedding-500">*</span></label>
+                            <input type="text" id="donor-pan" class="w-full bg-white border border-wedding-400 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all uppercase placeholder:normal-case placeholder:text-wedding-400" placeholder="Enter PAN number">
+                            <p class="text-[10px] text-wedding-500 mt-1 font-medium" id="pan-error">PAN number is required</p>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <!-- City -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">City</label>
-                            <input type="text" id="donor-city" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                            <label class="block text-sm font-semibold text-wedding-900 mb-1.5">City</label>
+                            <input type="text" id="donor-city" class="w-full bg-white border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:bg-white transition-all">
                         </div>
                         
                         <!-- State -->
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">State</label>
-                            <input type="text" id="donor-state" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                            <label class="block text-sm font-semibold text-wedding-900 mb-1.5">State</label>
+                            <input type="text" id="donor-state" class="w-full bg-white border border-wedding-200 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:bg-white transition-all">
                         </div>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="w-full bg-[#e81c8b] text-white font-bold text-lg rounded-xl py-4 hover:bg-[#d0197a] hover:shadow-lg hover:shadow-pink-500/30 transition-all mt-2">
+                <button type="submit" class="w-full bg-wedding-500 text-white font-bold text-lg rounded-xl py-4 hover:bg-wedding-600 hover:shadow-lg hover:shadow-wedding-500/30 transition-all mt-2">
                     Donate Now
                 </button>
             </form>

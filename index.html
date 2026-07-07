@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Shagun - Mass Weddings | Ladli Foundation</title>
+    <meta name="description" content="Support mass weddings for underprivileged couples through Project Shagun by Ladli Foundation. Help families celebrate with dignity.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wedding: {
+                            50: '#fffbf7', // Ivory/Cream background
+                            100: '#fdf2f0', // Softest blush
+                            200: '#fae3e1',
+                            300: '#f4c7c3', // Blush pink
+                            400: '#e8b4b8', // Rose Gold/Dusty Rose
+                            500: '#d4af37', // Champagne Gold primary
+                            600: '#c59b27', // Darker gold for hover
+                            700: '#8a7d6b', // Muted brownish-gold
+                            800: '#5c5246', 
+                            900: '#332d27', // Deep charcoal for text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                        script: ['Great Vibes', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased bg-wedding-50 text-wedding-900 selection:bg-wedding-400 selection:text-white floral-pattern">
+
+    <!-- Header -->
+    <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-white/60 backdrop-blur-md border-b border-white/30 shadow-sm" id="header">
+        <div class="w-full px-6 lg:px-16 py-3 flex items-center justify-between" id="nav-container">
+            <!-- Logo area -->
+            <div class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Ladli Foundation Logo" class="h-10 w-auto">
+                <div class="text-wedding-900 font-display font-bold text-xl tracking-tight leading-none hidden sm:block">
+                    Ladli<span class="text-wedding-500 font-script text-2xl ml-1 font-normal">Foundation</span>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="hidden items-center gap-8 lg:flex">
+                <a class="text-sm font-bold text-wedding-900 hover:text-wedding-500 transition-colors" href="#impact">Impact</a>
+                <a class="text-sm font-bold text-wedding-900 hover:text-wedding-500 transition-colors" href="#about">About</a>
+                <a class="text-sm font-bold text-wedding-900 hover:text-wedding-500 transition-colors" href="#support">Support</a>
+                <a class="text-sm font-bold text-wedding-900 hover:text-wedding-500 transition-colors" href="#testimonials">Stories</a>
+                <a href="https://www.ladlifoundation.org" target="_blank" class="px-5 py-2 bg-wedding-600 text-white text-sm font-bold rounded-full hover:bg-wedding-700 transition-all shadow-sm hover:shadow-md flex items-center gap-1.5 ml-2">Main Website <i class="ph-bold ph-arrow-up-right text-xs"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- True Split Screen Hero Section -->
+    <section class="relative min-h-screen flex flex-col lg:flex-row pt-20 lg:pt-0 bg-wedding-50">
+        
+        <!-- Left: Solid Background & Messaging (50% Width) -->
+        <div class="w-full lg:w-1/2 min-h-[60vh] lg:min-h-screen flex items-center justify-center px-6 lg:px-16 py-20 relative z-10">
+            <div class="max-w-xl w-full reveal-left">
+                <p class="font-script text-4xl sm:text-5xl text-wedding-600 mb-4 tracking-wide font-bold">Auspicious Beginnings</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-display font-bold text-wedding-900 leading-[1.1] mb-6">
+                    A dignified start for <br><span class="text-wedding-600 italic font-bold">every couple.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-wedding-900 leading-[1.7] mb-10 font-medium">
+                    Project Shagun organizes beautiful mass weddings for underprivileged couples. Help them celebrate their union without the burden of financial debt or social pressure.
+                </p>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-wedding-500/30">
+                    <div class="bg-white/60 backdrop-blur-sm border border-white/50 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 mx-auto bg-wedding-100 text-wedding-500 rounded-full flex items-center justify-center mb-3">
+                            <i class="ph-bold ph-heart text-xl"></i>
+                        </div>
+                        <p class="text-2xl font-display font-bold text-wedding-900 mb-1">400+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold text-wedding-700">Couples</p>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm border border-white/50 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 mx-auto bg-wedding-100 text-wedding-500 rounded-full flex items-center justify-center mb-3">
+                            <i class="ph-bold ph-users text-xl"></i>
+                        </div>
+                        <p class="text-2xl font-display font-bold text-wedding-900 mb-1">1.5Lac+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold text-wedding-700">Youth Interns & Volunteers</p>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm border border-white/50 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 mx-auto bg-wedding-100 text-wedding-500 rounded-full flex items-center justify-center mb-3">
+                            <i class="ph-bold ph-currency-inr text-xl"></i>
+                        </div>
+                        <p class="text-2xl font-display font-bold text-wedding-900 mb-1">15L+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold text-wedding-700">Funds Raised</p>
+                    </div>
+                    <div class="bg-white/60 backdrop-blur-sm border border-white/50 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition-transform">
+                        <div class="w-10 h-10 mx-auto bg-wedding-100 text-wedding-500 rounded-full flex items-center justify-center mb-3">
+                            <i class="ph-bold ph-calendar-blank text-xl"></i>
+                        </div>
+                        <p class="text-2xl font-display font-bold text-wedding-900 mb-1">59</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold text-wedding-700">Events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Image & Floating Form (50% Width) -->
+        <div class="w-full lg:w-1/2 min-h-screen relative flex items-center justify-center p-6 lg:p-12 overflow-hidden">
+            <!-- Full height image on the right -->
+            <img src="images/mass_hero.png" alt="Mass Wedding Ceremony" class="absolute inset-0 w-full h-full object-cover hero-zoom" />
+            
+            <!-- Donation Form Card (Floating Center) -->
+            <div class="w-full max-w-lg bg-white/10 backdrop-blur-sm rounded-3xl border border-white/40 p-10 shadow-[0_30px_60px_rgba(0,0,0,0.2)] relative z-10 overflow-hidden hover:-translate-y-1 transition-transform duration-300 reveal-right">
+                
+                <!-- Decorative corners -->
+                <div class="absolute top-4 left-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
+                <div class="absolute top-4 right-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
+                <div class="absolute bottom-4 left-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
+                <div class="absolute bottom-4 right-4 text-wedding-700 opacity-70"><i class="ph-fill ph-flower-lotus text-2xl"></i></div>
+
+                <div class="relative z-10 text-center mb-6 pt-4">
+                    <h2 class="text-2xl font-display font-bold text-wedding-900 mb-1">Make a Contribution</h2>
+                    <p class="text-wedding-900 text-sm font-script text-3xl mt-2 font-medium">Sponsor a couple's new beginning</p>
+                </div>
+                
+                <form id="donation-form" class="space-y-7 relative z-10">
+                    <!-- Amount Selection -->
+                    <div>
+                        <div class="grid grid-cols-3 gap-3 mb-3">
+                            <button type="button" class="amount-btn active border-2 border-wedding-500 bg-wedding-50 text-wedding-600 font-bold rounded-xl py-2.5 transition-colors shadow-sm" data-amount="1000">₹1,000</button>
+                            <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-2.5 hover:border-wedding-400 transition-colors shadow-sm" data-amount="2500">₹2,500</button>
+                            <button type="button" class="amount-btn border-2 border-wedding-200 text-wedding-700 bg-white font-bold rounded-xl py-2.5 hover:border-wedding-400 transition-colors shadow-sm" data-amount="5000">₹5,000</button>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-wedding-900 font-bold">₹</span>
+                            <input type="number" id="custom-amount" class="w-full bg-white/30 backdrop-blur-sm border-2 border-white/40 text-wedding-900 rounded-xl py-3 pl-10 pr-4 font-bold focus:outline-none focus:ring-2 focus:ring-wedding-500 focus:border-transparent transition-all placeholder:text-wedding-800 shadow-inner" placeholder="Custom amount" value="1000">
+                        </div>
+                    </div>
+                    
+                    <!-- User Details -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" class="w-full bg-white/30 backdrop-blur-sm border border-white/40 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-800 shadow-sm" placeholder="Full Name" required>
+                        <input type="email" class="w-full bg-white/30 backdrop-blur-sm border border-white/40 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-800 shadow-sm" placeholder="Email" required>
+                    </div>
+                    <input type="tel" class="w-full bg-white/30 backdrop-blur-sm border border-white/40 text-wedding-900 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-wedding-500 transition-all placeholder:text-wedding-800 shadow-sm" placeholder="Mobile Number" required>
+                    
+                    <button type="submit" class="w-full bg-wedding-600 text-white font-bold text-lg rounded-xl py-4 shadow-lg shadow-wedding-600/30 hover:bg-wedding-700 hover:-translate-y-0.5 transition-all flex justify-center items-center gap-2 mt-4">
+                        Donate Securely <i class="ph-bold ph-heart"></i>
+                    </button>
+                    
+                    <p class="text-center text-xs text-wedding-900 mt-4 flex items-center justify-center gap-1 font-bold bg-white/40 py-1.5 rounded-full">
+                        <i class="ph-fill ph-check-circle text-wedding-600"></i> Encrypted & secure. 80G Tax Exemption.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 lg:py-32 overflow-hidden bg-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-16 lg:grid-cols-2 items-center">
+                
+                <!-- Text Content -->
+                <div class="reveal-left">
+                    <p class="font-script text-3xl text-wedding-400 mb-2">Our Mission</p>
+                    <h2 class="text-4xl sm:text-5xl font-display font-bold text-wedding-900 mb-6 leading-tight">
+                        Celebrating love <br>without the burden.
+                    </h2>
+                    <p class="text-lg text-wedding-800 mb-6 leading-relaxed">
+                        Project Shagun is a profound social initiative dedicated to supporting underprivileged couples. We believe that every couple deserves to celebrate their union with joy, respect, and dignity, regardless of their financial background.
+                    </p>
+                    <p class="text-lg text-wedding-800 mb-8 leading-relaxed">
+                        By organizing beautifully curated mass weddings, we eliminate the exploitative expectations of dowry and the crippling debt that often follows traditional weddings. We provide a complete foundation for a new beginning.
+                    </p>
+                    
+                    <ul class="space-y-6 mt-10">
+                        <li class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full border border-wedding-400 bg-wedding-50 flex items-center justify-center text-wedding-500 mt-1 shadow-sm">
+                                <i class="ph-fill ph-scroll text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-display font-bold text-wedding-900">Legal Registration</h4>
+                                <p class="text-wedding-700 text-sm mt-1">Ensuring the marriage is officially recognized and protected under law.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full border border-wedding-400 bg-wedding-50 flex items-center justify-center text-wedding-500 mt-1 shadow-sm">
+                                <i class="ph-fill ph-hands-praying text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-display font-bold text-wedding-900">Dignified Ceremony</h4>
+                                <p class="text-wedding-700 text-sm mt-1">A beautiful, community-supported celebration with utmost respect.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Image Grid -->
+                <div class="relative reveal-right">
+                    <!-- Soft background frame -->
+                    <div class="absolute -inset-4 border-2 border-wedding-300/50 rounded-[40px] transform rotate-3 -z-10 bg-wedding-50"></div>
+                    
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-wedding-900/10 aspect-[4/5] border border-wedding-200">
+                        <img src="images/about.png" alt="Joyful Shagun Ceremony" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-wedding-900/60 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8 text-center">
+                            <p class="font-script text-3xl text-wedding-100 drop-shadow-md">"A celebration of community."</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Breakdown Section -->
+    <section id="support" class="py-20 lg:py-32 bg-wedding-100 text-wedding-900 relative overflow-hidden border-y border-wedding-200">
+        <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+                <p class="font-script text-4xl text-wedding-500 mb-2">Where Your Support Goes</p>
+                <h2 class="text-4xl sm:text-5xl font-display font-bold mb-6">Building a foundation for their future.</h2>
+                <p class="text-lg text-wedding-800">Your donation does more than fund a celebration. It provides the essential building blocks for a secure and dignified married life.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div class="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-xl shadow-wedding-900/5 border border-wedding-200 reveal-left aspect-square lg:aspect-auto h-full relative p-2 bg-white">
+                    <img src="images/support.png" alt="Couple holding hands" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                
+                <!-- List -->
+                <div class="order-1 lg:order-2 space-y-4 reveal-right">
+                    
+                    <div class="bg-white p-6 rounded-2xl flex gap-6 items-center group shadow-sm border border-wedding-100 transition-all hover:shadow-lg hover:border-wedding-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-full bg-wedding-50 border border-wedding-200 flex items-center justify-center text-wedding-500 group-hover:bg-wedding-500 group-hover:text-white group-hover:border-transparent transition-colors shrink-0">
+                            <i class="ph ph-tent text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-display font-bold mb-1 text-wedding-900">Venue & Arrangements</h3>
+                            <p class="text-wedding-700 text-sm">Beautiful, grand mandaps and seating for the couples and their families.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl flex gap-6 items-center group shadow-sm border border-wedding-100 transition-all hover:shadow-lg hover:border-wedding-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-full bg-wedding-50 border border-wedding-200 flex items-center justify-center text-wedding-500 group-hover:bg-wedding-500 group-hover:text-white group-hover:border-transparent transition-colors shrink-0">
+                            <i class="ph ph-t-shirt text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-display font-bold mb-1 text-wedding-900">Bridal & Groom Attire</h3>
+                            <p class="text-wedding-700 text-sm">Traditional, high-quality wedding outfits and essential jewelry.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl flex gap-6 items-center group shadow-sm border border-wedding-100 transition-all hover:shadow-lg hover:border-wedding-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-full bg-wedding-50 border border-wedding-200 flex items-center justify-center text-wedding-500 group-hover:bg-wedding-500 group-hover:text-white group-hover:border-transparent transition-colors shrink-0">
+                            <i class="ph ph-scroll text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-display font-bold mb-1 text-wedding-900">Legal Registration</h3>
+                            <p class="text-wedding-700 text-sm">Facilitating the official marriage certificate to protect their legal rights.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl flex gap-6 items-center group shadow-sm border border-wedding-100 transition-all hover:shadow-lg hover:border-wedding-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-full bg-wedding-50 border border-wedding-200 flex items-center justify-center text-wedding-500 group-hover:bg-wedding-500 group-hover:text-white group-hover:border-transparent transition-colors shrink-0">
+                            <i class="ph ph-package text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-display font-bold mb-1 text-wedding-900">Household Starter Kits</h3>
+                            <p class="text-wedding-700 text-sm">Basic utensils, bedding, and essentials to start their new home.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center reveal-up">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-wedding-900 mb-12">Words of Support</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <div class="bg-wedding-50 p-8 rounded-[32px] text-center relative border border-wedding-200 shadow-sm">
+                    <i class="ph-fill ph-quotes text-5xl text-wedding-300 absolute top-6 left-1/2 -translate-x-1/2 opacity-50"></i>
+                    <p class="text-lg text-wedding-800 mb-8 mt-10 relative z-10 font-display italic">"Supporting this initiative was one of the most meaningful contributions I have made. Knowing that my donation helped a couple start their life without debt is a beautiful feeling."</p>
+                    <div class="flex flex-col items-center gap-2 border-t border-wedding-200 pt-6">
+                        <h4 class="font-display font-bold text-wedding-900 text-xl">Rajesh Kumar</h4>
+                        <p class="text-wedding-500 text-sm font-semibold uppercase tracking-wider">Donor</p>
+                    </div>
+                </div>
+
+                <div class="bg-wedding-50 p-8 rounded-[32px] text-center relative border border-wedding-200 shadow-sm">
+                    <i class="ph-fill ph-quotes text-5xl text-wedding-300 absolute top-6 left-1/2 -translate-x-1/2 opacity-50"></i>
+                    <p class="text-lg text-wedding-800 mb-8 mt-10 relative z-10 font-display italic">"Volunteering at the Shagun mass wedding was an eye-opener. The joy on the faces of the couples and their families is unmatched. This program truly changes lives."</p>
+                    <div class="flex flex-col items-center gap-2 border-t border-wedding-200 pt-6">
+                        <h4 class="font-display font-bold text-wedding-900 text-xl">Priya Sharma</h4>
+                        <p class="text-wedding-500 text-sm font-semibold uppercase tracking-wider">Volunteer</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wedding-900 pt-20 pb-10 text-wedding-100 relative overflow-hidden border-t-4 border-wedding-500">
+        
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-8 lg:grid-cols-12 mb-16">
+                <!-- Branding -->
+                <div class="lg:col-span-4">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="ph-fill ph-flower-lotus text-wedding-400 text-3xl"></i>
+                        <div class="text-white font-display font-bold text-3xl tracking-tight leading-none">
+                            Ladli<span class="text-wedding-400 font-script text-4xl ml-1 font-normal">Foundation</span>
+                        </div>
+                    </div>
+                    <p class="text-wedding-100/70 text-lg leading-relaxed mb-8 max-w-md">
+                        Community-led support for safe, dignified, and financially responsible mass marriage ceremonies for underprivileged couples.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-wedding-500/50 bg-white/5 flex items-center justify-center hover:bg-wedding-500 hover:text-wedding-900 transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-wedding-500/50 bg-white/5 flex items-center justify-center hover:bg-wedding-500 hover:text-wedding-900 transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-wedding-500/50 bg-white/5 flex items-center justify-center hover:bg-wedding-500 hover:text-wedding-900 transition-colors"><i class="ph-fill ph-twitter-logo text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div class="lg:col-span-2">
+                    <h4 class="font-display font-bold text-xl mb-6 text-wedding-300">Explore</h4>
+                    <ul class="space-y-4 text-wedding-100/70">
+                        <li><a href="#about" class="hover:text-wedding-400 transition-colors">About Project Shagun</a></li>
+                        <li><a href="#impact" class="hover:text-wedding-400 transition-colors">Our Impact</a></li>
+                        <li><a href="#testimonials" class="hover:text-wedding-400 transition-colors">Donor Stories</a></li>
+                    </ul>
+                </div>
+
+                <!-- More Links -->
+                <div class="lg:col-span-3">
+                    <h4 class="font-display font-bold text-xl mb-6 text-wedding-300">More</h4>
+                    <ul class="space-y-4 text-wedding-100/70">
+                        <li><a href="https://www.ladlifoundation.org/about" target="_blank" class="hover:text-wedding-400 transition-colors flex items-center gap-1.5">About Ladli Foundation <i class="ph-bold ph-arrow-up-right text-xs"></i></a></li>
+                        <li><a href="https://www.ladlifoundation.org/privacy-policy" target="_blank" class="hover:text-wedding-400 transition-colors flex items-center gap-1.5">Privacy Policy <i class="ph-bold ph-arrow-up-right text-xs"></i></a></li>
+                        <li><a href="https://www.ladlifoundation.org/terms-conditions" target="_blank" class="hover:text-wedding-400 transition-colors flex items-center gap-1.5">Terms & Conditions <i class="ph-bold ph-arrow-up-right text-xs"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="lg:col-span-3">
+                    <h4 class="font-display font-bold text-xl mb-6 text-wedding-300">Contact Us</h4>
+                    <ul class="space-y-4 text-wedding-100/70">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-map-pin text-wedding-400 text-xl mt-0.5 shrink-0"></i>
+                            <span>Ladli Foundation Trust, Delhi, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-fill ph-envelope text-wedding-400 text-xl shrink-0"></i>
+                            <a href="mailto:info@ladlifoundation.org" class="hover:text-wedding-400 transition-colors">info@ladlifoundation.org</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-fill ph-phone text-wedding-400 text-xl shrink-0"></i>
+                            <a href="tel:+919876543210" class="hover:text-wedding-400 transition-colors">Support Line</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-wedding-500/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-wedding-100/50 text-sm">
+                <p>&copy; 2026 Ladli Foundation Trust. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="https://www.ladlifoundation.org/privacy-policy" target="_blank" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="https://www.ladlifoundation.org/terms-conditions" target="_blank" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

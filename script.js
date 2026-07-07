@@ -44,10 +44,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Prevent form submission for demo
+    // Modal Elements
+    const modal = document.getElementById('extended-donation-modal');
+    const modalContent = document.getElementById('modal-content');
+    const backdrop = document.getElementById('modal-backdrop');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const taxCheckbox = document.getElementById('tax-exemption-checkbox');
+    const taxSection = document.getElementById('tax-details-section');
+
+    // Prevent main form submission and open modal
     document.getElementById('donation-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Thank you for your pledge! In a real environment, this would redirect to a secure payment gateway.');
+        
+        // Open Modal
+        modal.classList.remove('hidden');
+        // Small delay to allow display:block to apply before animating opacity
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        }, 10);
+    });
+
+    // Close Modal Function
+    const closeModal = () => {
+        modal.classList.add('opacity-0');
+        modalContent.classList.remove('scale-100');
+        modalContent.classList.add('scale-95');
+        
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300); // match duration-300
+    };
+
+    closeModalBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+
+    // Toggle Tax Section
+    taxCheckbox.addEventListener('change', (e) => {
+        if (e.target.checked) {
+            taxSection.classList.remove('hidden');
+            // Make PAN required if checked
+            document.getElementById('donor-pan').setAttribute('required', 'true');
+        } else {
+            taxSection.classList.add('hidden');
+            document.getElementById('donor-pan').removeAttribute('required');
+        }
+    });
+
+    // Handle Complete Donation
+    document.getElementById('complete-donation-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for completing your donation details! In a real environment, this would redirect to a secure payment gateway.');
+        closeModal();
     });
 
     // 3. Scroll Reveal Animation Setup

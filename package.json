@@ -1,0 +1,25 @@
+{
+  "name": "ladlifoundation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./tailwind.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diyamaheshwari/LadliFoundationShagun.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Diyamaheshwari/LadliFoundationShagun/issues"
+  },
+  "homepage": "https://github.com/Diyamaheshwari/LadliFoundationShagun#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.3.2"
+  }
+}

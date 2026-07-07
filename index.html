@@ -7,23 +7,22 @@
     <meta name="description" content="Support mass weddings for underprivileged couples through Project Shagun by Ladli Foundation. Help families celebrate with dignity.">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         wedding: {
-                            50: '#fffdfa',  // Very warm, clean ivory background
-                            100: '#fcf3ec', // Softest warm sand offset
-                            200: '#e8d6c8', // Warm borders
-                            300: '#d4baab', // Muted elements
-                            400: '#b58c7c', // Secondary icons/text
-                            500: '#8b2635', // Primary Trust Maroon (dignified, cultural, matches images)
-                            600: '#6e1b27', // Darker Maroon for hover states
-                            700: '#4a3b32', // Warm dark charcoal secondary text
-                            800: '#362a22', // Darker backgrounds
-                            900: '#241b15', // Deepest warm black for main headings
+                            50: '#fffdfa',
+                            100: '#fcf3ec',
+                            200: '#e8d6c8',
+                            300: '#d4baab',
+                            400: '#b58c7c',
+                            500: '#8b2635',
+                            600: '#6e1b27',
+                            700: '#4a3b32',
+                            800: '#362a22',
+                            900: '#241b15',
                         }
                     },
                     fontFamily: {
@@ -46,12 +45,12 @@
             }
         }
     </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-sans antialiased bg-wedding-50 text-wedding-900 selection:bg-wedding-400 selection:text-white floral-pattern">
 
@@ -441,5 +440,84 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+
+    <!-- Extended Donation Modal -->
+    <div id="extended-donation-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-wedding-900/40 backdrop-blur-sm" id="modal-backdrop"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-md mx-4 bg-[#f8fafc] rounded-[2rem] shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="modal-content">
+            
+            <!-- Close Button -->
+            <button type="button" id="close-modal-btn" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors shadow-sm z-10">
+                <i class="ph-bold ph-x text-sm"></i>
+            </button>
+
+            <form id="complete-donation-form" class="p-6 sm:p-8 flex flex-col gap-5 max-h-[90vh] overflow-y-auto custom-scrollbar">
+                
+                <!-- Date of Birth -->
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1.5">Date of Birth</label>
+                    <div class="relative">
+                        <input type="date" required class="w-full bg-white border border-slate-200 text-slate-700 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all shadow-sm">
+                    </div>
+                </div>
+
+                <!-- Tax Exemption Card -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex items-start gap-3">
+                    <input type="checkbox" id="tax-exemption-checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 shrink-0 cursor-pointer">
+                    <label for="tax-exemption-checkbox" class="text-sm text-slate-600 leading-relaxed cursor-pointer">
+                        Check this only if you want to claim tax exemption after your donation. Your address and PAN details will be needed for that.
+                    </label>
+                </div>
+
+                <!-- Tax Details Section (Hidden by Default) -->
+                <div id="tax-details-section" class="hidden flex flex-col gap-5 animate-fade-in">
+                    
+                    <!-- Address -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1.5">Address</label>
+                        <input type="text" id="donor-address" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- PIN Code -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">PIN Code</label>
+                            <input type="number" id="donor-pin" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                        </div>
+                        
+                        <!-- PAN Number -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">PAN Number <span class="text-red-500">*</span></label>
+                            <input type="text" id="donor-pan" class="w-full bg-white border border-pink-500 text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all uppercase placeholder:normal-case placeholder:text-slate-400" placeholder="Enter PAN number">
+                            <p class="text-[10px] text-red-500 mt-1 font-medium" id="pan-error">PAN number is required</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- City -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">City</label>
+                            <input type="text" id="donor-city" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                        </div>
+                        
+                        <!-- State -->
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1.5">State</label>
+                            <input type="text" id="donor-state" class="w-full bg-slate-100 border border-transparent text-slate-800 rounded-xl py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-[#e81c8b] text-white font-bold text-lg rounded-xl py-4 hover:bg-[#d0197a] hover:shadow-lg hover:shadow-pink-500/30 transition-all mt-2">
+                    Donate Now
+                </button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

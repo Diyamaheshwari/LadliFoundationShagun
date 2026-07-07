@@ -30,6 +30,17 @@
                         sans: ['Inter', 'sans-serif'],
                         display: ['Playfair Display', 'serif'],
                         script: ['Great Vibes', 'cursive'],
+                    },
+                    animation: {
+                        blob: "blob 15s infinite alternate",
+                    },
+                    keyframes: {
+                        blob: {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" },
+                        }
                     }
                 }
             }
@@ -65,12 +76,23 @@
         </div>
     </header>
 
-    <!-- Z-Pattern Hero Section -->
-    <section class="relative pt-28 lg:pt-36 pb-16 bg-wedding-50">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Split Layout Hero Section -->
+    <section class="relative pt-24 lg:pt-28 pb-12 bg-wedding-50">
+        
+        <!-- Dynamic Translucent Background (Contained so it doesn't break sticky scrolling) -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <!-- Animated Blobs -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-wedding-200/50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+            <div class="absolute top-0 right-1/4 w-96 h-96 bg-wedding-300/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style="animation-delay: 3s;"></div>
+            <div class="absolute -bottom-32 left-1/2 w-[30rem] h-[30rem] bg-wedding-400/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" style="animation-delay: 7s;"></div>
+            <!-- Translucent White Glass Overlay -->
+            <div class="absolute inset-0 bg-white/60 backdrop-blur-[80px]"></div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             
             <!-- Split Grid: Left (Text + Image) and Right (Form) -->
-            <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                 
                 <!-- Left: Text, Stats, and Image (7 Columns) -->
                 <div class="lg:col-span-7 flex flex-col h-full">
@@ -78,17 +100,17 @@
                     <!-- Top of Left: Text & Stats -->
                     <div class="reveal-left text-center lg:text-left">
                         <!-- Eyebrow -->
-                        <div class="inline-block mb-3">
-                            <span class="uppercase tracking-widest text-xs font-bold text-wedding-500">Auspicious Beginnings</span>
+                        <div class="inline-block mb-2">
+                            <span class="uppercase tracking-widest text-[10px] md:text-xs font-bold text-wedding-500">Auspicious Beginnings</span>
                         </div>
                         
                         <!-- Main Headline -->
-                        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-display font-bold text-wedding-900 leading-[1.1] mb-5 tracking-tight">
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-wedding-900 leading-[1.1] mb-4 tracking-tight">
                             A dignified start for <span class="text-wedding-500 block mt-1">every couple.</span>
                         </h1>
                         
                         <!-- Subheadline -->
-                        <p class="text-base lg:text-lg xl:text-xl text-wedding-700 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                        <p class="text-sm md:text-base lg:text-lg text-wedding-700 leading-relaxed mb-6 max-w-lg mx-auto lg:mx-0">
                             Project Shagun organizes beautiful mass weddings for underprivileged couples. Help them celebrate their union without the burden of financial debt or social pressure.
                         </p>
                         
